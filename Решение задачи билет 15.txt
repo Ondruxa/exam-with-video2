@@ -1,1 +1,6 @@
-﻿
+﻿SELECT department,
+       MAX(salary) AS Max_Salary,
+       AVG(salary) AS AVG_Salary
+FROM employee
+GROUP BY department
+HAVING COUNT(*) > 1;
